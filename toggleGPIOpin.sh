@@ -40,7 +40,6 @@ echo "0" > /sys/class/gpio/gpio$GPIOPIN/value
 echo "$GPIOPIN" > /sys/class/gpio/unexport
 
 # if the incorrect number of arguments were passed, then finish with a newline
-if [ $# -ne 2 ]
-then
+if [ $# -ne 2 ]; then
 	echo 
 fi
