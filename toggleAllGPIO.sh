@@ -13,5 +13,5 @@ do
 	sleep 0.5
 	sh toggleGPIOpin.sh $i 1
 	sleep 1
-	echo ""
+	echo
 done
