@@ -8,12 +8,16 @@ Syntax
 
 Run syntax to toggle a single GPIO pin:
 
-sudo bash toggleGPIOpin.h 4
+	sudo bash toggleGPIOpin.h 4
+
 -OR-
-sudo ./toggleGPIOpin.h 4
+
+	sudo ./toggleGPIOpin.h 4
 
 Run syntax to toggle all GPIO pins:
 
-sudo bash toggleAllGPIO.h
+	sudo bash toggleAllGPIO.h
+
 -OR-
-sudo ./toggleAllGPIO.h
+
+	sudo ./toggleAllGPIO.h
