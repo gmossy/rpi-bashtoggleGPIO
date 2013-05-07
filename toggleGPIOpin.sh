@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # check if the script is run by root
 if [ "$(whoami)" != "root" ]; then
@@ -6,8 +6,9 @@ if [ "$(whoami)" != "root" ]; then
 	exit 1
 fi
 
-# GPIO numbers should be from this list
-# 0, 1, 4, 7, 8, 9, 10, 11, 14, 15, 17, 18, 21, 22, 23, 24, 25
+# GPIO numbers should be from this list:
+# Rev 1. 0, 1, 4, 7, 8, 9, 10, 11, 14, 15, 17, 18, 21, 22, 23, 24, 25
+# Rev 2. 2, 3, 4, 7, 8, 9, 10, 11, 14, 15, 17, 18, 22, 23, 24, 25, 27
 
 # set GPIO pin according to argument, otherwise default to pin 4
 GPIOPIN=${1:-4}
@@ -16,8 +17,7 @@ GPIOPIN=${1:-4}
 PAUSETIME=${2:-1}
 
 # if the incorrect number of arguments were passed, echo verbose message
-if [ $# -ne 2 ]
-then
+if [ $# -ne 2 ]; then
 	echo -n "* Toggle GPIO pin $GPIOPIN: "
 fi
 
